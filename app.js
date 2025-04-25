@@ -2,6 +2,8 @@ import express from 'express';
 import morgan from 'morgan';
 import courseRoutes from './routes/courseRoutes.js';
 import { globalErrorHandler } from './middlewares/errorMiddleware.js';
+import { AppError } from './utils/AppError.js';
+
 
 const app = express();
 
