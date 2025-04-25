@@ -10,6 +10,8 @@ const app = express();
 app.use(express.json());
 if (process.env.NODE_ENV === 'development') app.use(morgan('dev'));
 
+
+app.get('/favicon.png', (req, res) => res.status(204).end());
 app.use('/api/courses', courseRoutes);
 app.use(globalErrorHandler);
 
